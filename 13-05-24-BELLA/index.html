@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella NP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Welcome to Katik</h1>
+            <p>Selamat datang</p>
+            <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar segitiga</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#luassegitiga" onclick="showSection('luassegitiga')">Luas Segitiga</a>
+        <a href="#kelilingsegitiga" onclick="showSection('kelilingsegitiga')">Keliling Segitiga</a>
+    </nav>
+
+    <section id="luassegitiga">
+    <h2>Luas Segitiga</h2>
+    <div class="triangle-form">
+        <form onsubmit="calculateArea(event)">
+            <img src="assets/luas-segitiga.jpg" alt="luas-segitiga.jpg">
+            <p><b><u> Luas Segitiga Yaitu :</u></b> </p>
+            <p><b>L = 1/2 x a x t</b></p>
+            <p><b><u>Dimana :</u> </b><br>
+            <b>L = Luas</b><br>
+            <b>a = Panjang Alas</b><br>
+            <b>t = Tinggi</b></p>
+            <h1>Hitung Luas Segitiga</h1>
+            <div class="form-inputs">
+                <input type="text" id="alas" placeholder="Panjang Alas" required>
+                <input type="text" id="tinggi" placeholder="Tinggi" required><br>
+                <button type="submit">Hitung</button>
+                <button type="reset">Reset</button>
+            </div>
+            <p id="result"></p>
+        </form>
+    </div>
+</section>
+
+<section id="kelilingsegitiga">
+    <h2>Keliling Segitiga</h2>
+    <div class="triangle-form">
+        <form onsubmit="calculatePerimeter(event)">
+            <img src="assets/luas-segitiga.jpg" alt="luas-segitiga.jpg">
+            <p><b><u>Rumus Keliling Segitiga Yaitu :</u></b> </p>
+            <p><b>K = S1 + S2 + S3 </b></p>
+            <p><b><u>Di mana : </u></b><br>
+            <b>K = Keliling </b><br>
+            <b>S1 = Sisi A </b><br>
+            <b>S2 = Sisi B </b><br>
+            <b>S3 = Sisi C </b></p>
+            <h1>Hitung Keliling Segitiga</h1>
+            <div class="form-inputs">
+                <input type="text" id="sisi1" placeholder="Panjang Sisi 1" required>
+                <input type="text" id="sisi2" placeholder="Panjang Sisi 2" required>
+                <input type="text" id="sisi3" placeholder="Panjang Sisi 3" required><br>
+                <button type="submit">Hitung</button>
+                <button type="reset">Reset</button>
+            </div>
+            <p id="result_perimeter"></p>
+        </form>
+    </div>
+</section>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
